@@ -1,0 +1,61 @@
+// SideBar
+
+.sidebar {
+  background-color: rgba($color: #ff6962, $alpha: 0.99);
+  width: 300px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  animation: nav 0.5s normal 0s ease-in-out;
+  z-index: 1;
+
+  @keyframes nav {
+    0% {
+      transform: translateX(100%);
+    }
+  }
+  &_icon {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 10px 0 0 10px;
+    font-size: 1.4rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:hover,
+    &:focus {
+      transition: all 3s ease-out;
+      transform: rotate(360deg);
+      border: none;
+    }
+  }
+  &_item {
+    width: 200px;
+    height: 50vh;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    text-align: center;
+    
+    ul {
+      text-align: center;
+      list-style: none;
+    }
+    li {
+      text-align: center;
+      margin: 10px 0;
+    }
+    a {
+      color: #30336b;
+      font-family: "Dana-Bold";
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+// Footer
+.footer {
+  text-align: center;
+  width: 15rem;
+  height: 2rem;
+  color: black;
+  font-size: small;
+
+  &_icon {
+    font-size: medium;
+    color: #ff6962;
+    margin: 0px 4px;
+    animation: love 10s infinite 0s ease-in-out;
+    @keyframes love {
+      0% {
+        color: #ff6962;
+        transform: scale(1);
+      }
+
+      20% {
+        transform: scale(0.9);
+      }
+
+      40% {
+        transform: scale(1);
+      }
+
+      60% {
+        transform: scale(1.02);
+        color: red;
+      }
+      80% {
+        transform: scale(1);
+      }
+      100% {
+        color: red;
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+.home_footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 40px;
+}

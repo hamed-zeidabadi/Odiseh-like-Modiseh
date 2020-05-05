@@ -1,0 +1,170 @@
+// header
+// Pink #ff6962
+// Blue #30336b
+@import "./Footer.scss";
+@import "./Single_Card.scss";
+@import "./SideBar.scss";
+@import "./Shop_Card.scss";
+@import "./ChatBox.scss";
+@import "./Card_Product.scss";
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 130px;
+
+  .icon {
+    margin-top: -1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &:hover,
+    &:focus {
+      color: #8a140e;
+    }
+    p {
+      font-size: small;
+      position: absolute;
+      left: 200px;
+    }
+    img {
+      width: 180px;
+      height: 100px;
+    }
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 95vw;
+  height: 50px;
+  .search {
+    display: flex;
+    align-items: center;
+    input {
+      width: 10rem;
+      color: #30336b;
+      text-align: center;
+      border: none;
+      font-size: small;
+      padding: 1rem;
+      &::placeholder {
+        color: #30336b;
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &::selection {
+        color: #30336b;
+        animation: input2 1s normal 0s ease-in-out;
+        border-bottom: 1px #ff6962 solid;
+      }
+
+      @keyframes input2 {
+        0% {
+          transform: rotate(0deg);
+        }
+        33% {
+          transform: rotate(-5deg);
+        }
+        66% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+  .navItem {
+    .menu {
+      font-size: 2.3rem;
+      padding: 3px;
+      color: rgba($color: #30336b, $alpha: 1);
+    }
+    &:hover,
+    &:focus {
+      color: #ff6962;
+      border: 1px solid #ff6962;
+      border-radius: 50%;
+    }
+  }
+  .icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    .icon_badge {
+      text-align: center;
+      align-self: center;
+      font-family: "Dana Bold";
+      font-size: 1em;
+      position: absolute;
+      border-radius: 50%;
+      top: -23px;
+      left: 59px;
+      color: black;
+    }
+    &_item {
+      position: relative;
+      margin: 0 3px;
+      font-size: 2.6rem;
+      border-radius: 50%;
+      padding: 8px;
+      translate: all 5s;
+      color: rgba($color: #30336b, $alpha: 1);
+      &_chat {
+        animation: icon 5s infinite 3s ease-in-out;
+      }
+      &:hover,
+      &:focus {
+        border: 1px solid #ff6962;
+        color: #ff6962;
+      }
+      @keyframes icon {
+        0% {
+          transform: rotate(5deg);
+        }
+        15% {
+          transform: rotate(15deg);
+        }
+        30% {
+          transform: rotate(-15deg);
+        }
+        45% {
+          transform: rotate(20deg);
+        }
+        60% {
+          transform: rotate(-20deg);
+        }
+        75% {
+          transform: rotate(10deg);
+        }
+        90% {
+          transform: rotate(-10deg);
+        }
+        100% {
+          transform: rotate(-5deg);
+        }
+      }
+    }
+  }
+}
+
+// loading gif
+.loading {
+  height: 80%;
+  justify-content: center;
+  align-self: center;
+  margin: 150px auto;
+  img {
+    width: 60px;
+    width: 60px;
+  }
+}
